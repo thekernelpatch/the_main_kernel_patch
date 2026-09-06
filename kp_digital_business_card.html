@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>kp Ramsdale — The Kernel Patch</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+  :root {
+    --navy: #1A2733;
+    --navy-deep: #0F1922;
+    --gold: #D9A441;
+    --cream: #F2ECDC;
+    --sage: #4C6B4A;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--navy-deep);
+    background-image:
+      radial-gradient(circle at 20% 15%, rgba(201,162,39,0.08), transparent 45%),
+      radial-gradient(circle at 80% 85%, rgba(138,154,126,0.10), transparent 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--cream);
+  }
+
+  .card {
+    width: 100%;
+    max-width: 380px;
+    background: var(--navy);
+    border: 1px dashed rgba(244,239,226,0.35);
+    outline: 1px solid rgba(201,162,39,0.5);
+    outline-offset: 6px;
+    border-radius: 4px;
+    padding: 36px 28px 30px;
+    text-align: center;
+  }
+
+  .mark {
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 18px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', monospace;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: var(--gold);
+  }
+
+  h1 {
+    font-size: 26px;
+    margin: 0 0 2px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+  }
+
+  .role {
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    color: var(--sage);
+    margin-bottom: 16px;
+  }
+
+  .tagline {
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    color: var(--cream);
+    opacity: 0.85;
+    line-height: 1.6;
+    margin: 0 0 26px;
+    padding: 0 6px;
+  }
+
+  .qr-wrap {
+    background: var(--cream);
+    border-radius: 4px;
+    padding: 14px;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  #qrcode img {
+    display: block;
+  }
+
+  .qr-hint {
+    font-size: 11px;
+    color: rgba(244,239,226,0.55);
+    margin-bottom: 26px;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 0.5px;
+  }
+
+  .contact {
+    text-align: left;
+    border-top: 1px solid rgba(244,239,226,0.15);
+    padding-top: 18px;
+    margin-bottom: 24px;
+  }
+
+  .contact-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .contact-row .patch {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--sage);
+    border: 1px solid rgba(244,239,226,0.4);
+    flex-shrink: 0;
+  }
+
+  .contact-row a {
+    color: var(--cream);
+    text-decoration: none;
+  }
+
+  .contact-row a:hover { color: var(--gold); }
+
+  button.save {
+    width: 100%;
+    background: var(--gold);
+    color: var(--navy-deep);
+    border: none;
+    padding: 13px 20px;
+    font-family: 'Courier New', monospace;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  button.save:hover { background: #ddb84a; }
+
+  button.save:focus-visible {
+    outline: 2px solid var(--cream);
+    outline-offset: 2px;
+  }
+
+  .site {
+    margin-top: 16px;
+    font-size: 12px;
+    color: rgba(244,239,226,0.5);
+    font-family: 'Courier New', monospace;
+  }
+
+  .site a { color: rgba(244,239,226,0.7); }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="mark">kp</div>
+  <h1>kp Ramsdale</h1>
+  <div class="role">THE KERNEL PATCH</div>
+  <p class="tagline">Tech for people who want to do anything but.</p>
+
+  <div class="qr-wrap">
+    <div id="qrcode"></div>
+  </div>
+  <p class="qr-hint">scan to save contact</p>
+
+  <div class="contact">
+    <div class="contact-row"><span class="patch"></span><a href="tel:+14252707239">(425) 270-7239</a></div>
+    <div class="contact-row"><span class="patch"></span><a href="mailto:kp@thekernelpatch.com">kp@thekernelpatch.com</a></div>
+    <div class="contact-row"><span class="patch"></span><a href="https://thekernelpatch.com" target="_blank" rel="noopener">thekernelpatch.com</a></div>
+  </div>
+
+  <button class="save" onclick="saveContact()">SAVE MY CONTACT</button>
+
+  <div class="site">tap the button on your own phone, or scan above from someone else's</div>
+</div>
+
+<script>
+  const vcard = "BEGIN:VCARD\r\n" +
+    "VERSION:3.0\r\n" +
+    "N:Ramsdale;kp;;;\r\n" +
+    "FN:kp Ramsdale\r\n" +
+    "ORG:The Kernel Patch\r\n" +
+    "TITLE:Founder\r\n" +
+    "TEL;TYPE=WORK,VOICE:+14252707239\r\n" +
+    "EMAIL;TYPE=WORK:kp@thekernelpatch.com\r\n" +
+    "URL:https://thekernelpatch.com\r\n" +
+    "NOTE:Tech for people who want to do anything but.\r\n" +
+    "END:VCARD\r\n";
+
+  new QRCode(document.getElementById("qrcode"), {
+    text: vcard,
+    width: 168,
+    height: 168,
+    colorDark: "#16233d",
+    colorLight: "#f4efe2",
+    correctLevel: QRCode.CorrectLevel.M
+  });
+
+  function saveContact() {
+    const blob = new Blob([vcard], { type: "text/vcard" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "kp-ramsdale.vcf";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+</script>
+
+</body>
+</html>
