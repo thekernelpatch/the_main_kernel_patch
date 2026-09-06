@@ -49,14 +49,8 @@
     margin: 0 auto 18px;
     border: 2px solid var(--gold);
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Courier New', monospace;
-    font-weight: 700;
-    font-size: 18px;
-    letter-spacing: 1px;
-    color: var(--gold);
+    display: block; /* changed from flex to block to center images easily */
+    object-fit: cover; /*keeps your image from stretching out of proportion*/
   }
 
   h1 {
@@ -70,7 +64,7 @@
     font-family: 'Courier New', monospace;
     font-size: 12px;
     letter-spacing: 1.5px;
-    color: var(--sage);
+    color: var(--gold);
     margin-bottom: 16px;
   }
 
@@ -169,7 +163,7 @@
 <body>
 
 <div class="card">
-  <div class="mark">kp</div>
+  <img class="mark" src= "images/kp_logo.png" alt= "the kernel patch logo">
   <h1>kp Ramsdale</h1>
   <div class="role">THE KERNEL PATCH</div>
   <p class="tagline">Tech for people who want to do anything but.</p>
