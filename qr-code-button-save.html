@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Client Help Files — The Kernel Patch</title>
+<title>kp Ramsdale — The Kernel Patch</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <style>
   :root {
@@ -11,10 +11,7 @@
     --navy-deep: #0F1922;
     --gold: #D9A441;
     --cream: #F2ECDC;
-    --cavas-cream: #efe7d8;
     --sage: #4C6B4A;
-    --ink: #2e2a22;
-    --ink-soft: #68614f;
   }
 
   * { box-sizing: border-box; }
@@ -34,15 +31,9 @@
     color: var(--cream);
   }
 
-  .banner {
-  margin: 0;
-
-
-  }
-
   .card {
     width: 100%;
-    max-width: 1080px;
+    max-width: 380px;
     background: var(--navy);
     border: 1px dashed rgba(244,239,226,0.35);
     outline: 1px solid rgba(201,162,39,0.5);
@@ -69,7 +60,7 @@
     letter-spacing: 0.3px;
   }
 
-  .role { /*page title*/
+  .role {
     font-family: 'Courier New', monospace;
     font-size: 12px;
     letter-spacing: 1.5px;
@@ -173,27 +164,21 @@
 
 <div class="card">
   <img class="mark" src= "images/kp_Logo.png" alt= "the kernel patch logo">
-  <h1>Client Help Files</h1>
+  <h1>kp Ramsdale</h1>
   <div class="role">THE KERNEL PATCH</div>
   <p class="tagline">Tech for people who want to do anything but.</p>
-<!-- 
+
   <div class="qr-wrap">
     <div id="qrcode"></div>
   </div>
   <p class="qr-hint">scan to save contact</p>
--->
+
   <div class="contact">
-    <div class="contact-row"><span class="patch"></span><a href="claude-privacy-pros-cons.html">Claude Privacy Pros & Cons</a></div>
-    <div class="contact-row"><span class="patch"></span><a href="export-archive-your-email.html">Export Email to Archive</a></div>
-    <div class="contact-row"><span class="patch"></span><a href="new-outlook-calendar-subscription-fix.html">New Outlook Calendar Subscription work-around</a></div>
-    <div class="contact-row"><span class="patch"></span><a href="onedrive-backup-status.html">How you can tell your files are backed up in the Cloud</a></div>
-    <div class="contact-row"><span class="patch"></span><a href="private-album-vs-secure-folder.html">Samsung Phone private album vs secure folder</a></div>
-    <div class="contact-row"><span class="patch"></span><a href="qr-code-button-save.html">Contact</a></div>
-    <div class="contact-row"><span class="patch"></span><a href="three-folder-email-system.html">Keeping your email sorted</a></div>
-    <div class="contact-row"><span class="patch"></span><a href="what-is-bitlocker.html">what is BitLocker????</a></div>
-    <div class="contact-row"><span class="patch"></span><a href="how-my-service-options-work.html">How kp service options work</a></div>
+    <div class="contact-row"><span class="patch"></span><a href="tel:+14252707239">(425) 270-7239</a></div>
+    <div class="contact-row"><span class="patch"></span><a href="mailto:kp@thekernelpatch.com">kp@thekernelpatch.com</a></div>
+    <div class="contact-row"><span class="patch"></span><a href="https://thekernelpatch.com" target="_blank" rel="noopener">thekernelpatch.com</a></div>
   </div>
-<!--
+
   <button class="save" onclick="saveContact()">SAVE MY CONTACT</button>
 
   <div class="site">tap the button on your own phone, or scan above from someone else's</div>
@@ -232,7 +217,9 @@
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
   }
-</script> -->
+</script>
+
+<a href="what-is-bitlocker.html">What is BitLocker?</a>
 
 </body>
 </html>

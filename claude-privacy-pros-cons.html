@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Is It Safe to Connect Claude to My Email? | The Kernel Patch</title>
+<style>
+ :root{--navy:#1A2733;--cream:#F2ECDC;--gold:#D9A441;--sage:#4C6B4A;--navydeep:#0F1922;}
+ body{font-family:"Courier New","Liberation Mono",Courier,monospace;background:var(--cream);color:var(--navy);line-height:1.6;font-size:17px;margin:0;}
+ .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem;}
+ h1{color:var(--navy);border-bottom:3px solid var(--gold);padding-bottom:.5rem;font-size:1.7rem;}
+ h2{color:var(--sage);font-size:1.15rem;margin-top:2rem;}
+ .byline{color:var(--sage);font-size:.9rem;margin-bottom:2rem;}
+ .cta{background:var(--gold);color:var(--navy);padding:.9rem 1.4rem;display:inline-block;border-radius:6px;text-decoration:none;font-weight:bold;margin-top:2rem;}
+ footer{margin-top:3rem;font-size:.85rem;color:var(--sage);}
+ ul{padding-left:1.2rem;}
+ li{margin-bottom:.6rem;}
+ .note{background:#fff;border-left:4px solid var(--gold);padding:.8rem 1rem;margin:1.5rem 0;font-size:.95rem;}
+ .cols{display:flex;gap:1.5rem;flex-wrap:wrap;}
+ .col{flex:1;min-width:240px;}
+ .col h3{color:var(--navy);margin-bottom:.4rem;}
+ .sources{margin-top:2.5rem;padding-top:1rem;border-top:1px solid #ccc;}
+ .sources h2{margin-top:0;}
+ .sources ul{padding-left:1.2rem;}
+ .sources li{margin-bottom:.5rem;font-size:.92rem;}
+ .sources a{color:var(--sage);}
+ .source-note{font-size:.85rem;color:var(--sage);margin-top:.8rem;}
+</style>
+</head>
+<body>
+<div class="wrap">
+ <h1>Is It Safe to Connect Claude (or Any AI) to My Email?</h1>
+ <p class="byline">The Kernel Patch — plain-language tech notes</p>
+
+ <p>A lot of people want the convenience — having an AI assistant read and help sort your inbox — but hesitate at the idea of a company "seeing" everything you write and receive. That's a completely reasonable thing to want clarity on before saying yes.</p>
+
+ <h2>Two separate questions, worth untangling</h2>
+ <p>People often blur these together, but they're different settings entirely:</p>
+ <ul>
+ <li><strong>"Does the company train its AI on my content?"</strong> — a setting about whether your conversations get used to improve future versions of the model.</li>
+ <li><strong>"What can the AI actually see and do?"</strong> — a separate setting about which of your accounts (email, calendar, files) it's been given permission to read, and what it's allowed to act on.</li>
+ </ul>
+ <p>Connecting an email account answers the second question. It doesn't automatically answer the first.</p>
+
+ <div class="cols">
+ <div class="col">
+ <h3>Pros</h3>
+ <ul>
+ <li>You control exactly which accounts get connected — nothing links up without you approving it.</li>
+ <li>Business and paid work-tier plans generally exclude your data from model training entirely, by contract.</li>
+ <li>You can disconnect an account at any time, same as revoking access to any other app.</li>
+ <li>It can genuinely save hours a week on inbox triage, drafting replies, and scheduling.</li>
+ </ul>
+ </div>
+ <div class="col">
+ <h3>Cons / things to watch</h3>
+ <ul>
+ <li>Consumer-tier plans (the everyday personal subscription) now ask you to actively choose whether your conversations can be used to improve future models — it's an opt-<em>in</em>, not something that's on by default and needs turning off. Still worth checking your privacy settings rather than assuming, since that choice also affects how long your data is kept.</li>
+ <li>Once connected, the assistant can technically see whatever is in that inbox — sensitive personal or financial threads included.</li>
+ <li>Policies change more often than most software settings — worth a quick recheck every so often.</li>
+ </ul>
+ </div>
+ </div>
+
+ <h2>A reasonable middle ground</h2>
+ <p>If you're not ready to connect a personal inbox, you don't have to go all-or-nothing. Common options:</p>
+ <ul>
+ <li>Confirm your "use my data to improve the model" choice before connecting anything — it's usually one toggle in privacy settings.</li>
+ <li>Start with a lower-stakes account (a business or newsletter inbox) rather than your primary personal one.</li>
+ <li>Use it for drafting and organizing without giving it send/delete permissions.</li>
+ </ul>
+
+ <div class="note">Settings and policies change — always check the assistant's current privacy page before connecting anything sensitive, rather than relying on older articles (including this one).</div>
+
+ <a class="cta" href="https://www.thekernelpatch.com/contact">Want help setting this up safely? Get in touch →</a>
+
+ <div class="sources">
+ <h2>Sources</h2>
+ <ul>
+ <li><a href="https://www.anthropic.com/news/updates-to-our-consumer-terms">Updates to our Consumer Terms and Privacy Policy</a> — Anthropic</li>
+ </ul>
+ <p class="source-note">Corrected 2026-09-18: the original draft described the consumer training setting as opt-out ("unless you turn it off"). As of Anthropic's August 2025 policy update it's opt-in — nothing trains on your data by default until you choose to allow it.</p>
+ </div>
+
+ <footer>The Kernel Patch — Tech for people who want to do anything but.</footer>
+</div>
+</body>
+</html>

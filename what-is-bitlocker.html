@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>What Is BitLocker (and Why Do I Need a Recovery Key)? | The Kernel Patch</title>
+<style>
+ :root{--navy:#1A2733;--cream:#F2ECDC;--gold:#D9A441;--sage:#4C6B4A;--navydeep:#0F1922;}
+ body{font-family:"Courier New","Liberation Mono",Courier,monospace;background:var(--cream);color:var(--navy);line-height:1.6;font-size:17px;margin:0;}
+ .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem;}
+ h1{color:var(--navy);border-bottom:3px solid var(--gold);padding-bottom:.5rem;font-size:1.7rem;}
+ h2{color:var(--sage);font-size:1.15rem;margin-top:2rem;}
+ .byline{color:var(--sage);font-size:.9rem;margin-bottom:2rem;}
+ .cta{background:var(--gold);color:var(--navy);padding:.9rem 1.4rem;display:inline-block;border-radius:6px;text-decoration:none;font-weight:bold;margin-top:2rem;}
+ footer{margin-top:3rem;font-size:.85rem;color:var(--sage);}
+ ul,ol{padding-left:1.2rem;}
+ li{margin-bottom:.6rem;}
+ .sources{margin-top:2.5rem;padding-top:1rem;border-top:1px solid #ccc;}
+ .sources h2{margin-top:0;}
+ .sources ul{padding-left:1.2rem;}
+ .sources li{margin-bottom:.5rem;font-size:.92rem;}
+ .sources a{color:var(--sage);}
+ .source-note{font-size:.85rem;color:var(--sage);margin-top:.8rem;}
+</style>
+</head>
+<body>
+<div class="wrap">
+ <h1>What Is BitLocker, and Why Do I Need a Recovery Key?</h1>
+ <p class="byline">The Kernel Patch — plain-language tech notes</p>
+
+ <p>If you've ever restarted your Windows laptop and been met with a blue screen asking for a "recovery key," that's BitLocker — and it's not a scam or a virus. It's a built-in Windows feature working exactly as intended.</p>
+
+ <h2>What it actually does</h2>
+ <p>BitLocker encrypts everything on your hard drive. If your laptop is ever lost or stolen, whoever has it can't just pull the drive out and read your files — the data is scrambled without the key. It's a genuinely good security feature, especially if your laptop travels with you.</p>
+
+ <h2>Why the recovery key exists</h2>
+ <p>Normally, BitLocker unlocks quietly in the background every time you turn on your computer — you never see it. The recovery key is the backup plan for the handful of situations where Windows can't confirm it's really you logging into your own device: an interrupted update, a hardware change, or a boot process that got cut off partway through.</p>
+
+ <h2>When you'd actually need it</h2>
+ <ul>
+ <li>Your computer restarts mid-update and boots into a blue "Enter recovery key" screen.</li>
+ <li>You've swapped or upgraded certain hardware.</li>
+ <li>You're moving the hard drive into a different computer.</li>
+ </ul>
+
+ <h2>Where to find yours ahead of time</h2>
+ <p>Don't wait until you're locked out. If your laptop is linked to a Microsoft account, your key is usually stored there automatically. To check:</p>
+ <ol>
+ <li>Sign into <strong>account.microsoft.com</strong> from any device.</li>
+ <li>Go to <strong>Devices</strong>, select your laptop, then <strong>Info</strong>.</li>
+ <li>Look for <strong>BitLocker recovery keys</strong> → <strong>Manage recovery keys</strong>.</li>
+ </ol>
+ <p>There's also a more direct route: go straight to <strong>aka.ms/myrecoverykey</strong> and sign in — it takes you right to your stored recovery keys without the extra clicks through Devices.</p>
+ <p>If that page throws you back to a login prompt instead of showing your keys, it usually means your two-factor authentication lapsed — often after a restart, where you're only verified with a password and haven't re-confirmed the second factor. Click <strong>Security</strong> on your account page first; it forces a re-login with both factors, which then unblocks the recovery keys page.</p>
+ <p>Once you find it, write it down, print it, or store a photo of it somewhere private (a phone's secure photo folder works well) — not just left sitting in an easily-found email or note.</p>
+
+ <a class="cta" href="https://www.thekernelpatch.com/contact">Locked out or want help finding yours? Get in touch →</a>
+
+ <div class="sources">
+ <h2>Sources</h2>
+ <ul>
+ <li><a href="https://support.microsoft.com/en-us/windows/security/encryption/find-your-bitlocker-recovery-key">Find your BitLocker recovery key</a> — Microsoft Support</li>
+ <li><a href="https://aka.ms/myrecoverykey">aka.ms/myrecoverykey</a> — Microsoft's direct recovery-key portal</li>
+ </ul>
+ <p class="source-note">The two-factor re-login tip above is from The Kernel Patch's own troubleshooting experience, not official Microsoft documentation.</p>
+ </div>
+
+ <footer>The Kernel Patch — Tech for people who want to do anything but.</footer>
+</div>
+</body>
+</html>

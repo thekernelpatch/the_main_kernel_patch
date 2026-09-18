@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>New Outlook Won't Add Your Web Calendar? Here's the Fix | The Kernel Patch</title>
+<style>
+ :root{--navy:#1A2733;--cream:#F2ECDC;--gold:#D9A441;--sage:#4C6B4A;--navydeep:#0F1922;}
+ body{font-family:"Courier New","Liberation Mono",Courier,monospace;background:var(--cream);color:var(--navy);line-height:1.6;font-size:17px;margin:0;}
+ .wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem;}
+ h1{color:var(--navy);border-bottom:3px solid var(--gold);padding-bottom:.5rem;font-size:1.7rem;}
+ h2{color:var(--sage);font-size:1.15rem;margin-top:2rem;}
+ .byline{color:var(--sage);font-size:.9rem;margin-bottom:2rem;}
+ .cta{background:var(--gold);color:var(--navy);padding:.9rem 1.4rem;display:inline-block;border-radius:6px;text-decoration:none;font-weight:bold;margin-top:2rem;}
+ footer{margin-top:3rem;font-size:.85rem;color:var(--sage);}
+ ol,ul{padding-left:1.2rem;}
+ li{margin-bottom:.6rem;}
+ .note{background:#fff;border-left:4px solid var(--gold);padding:.8rem 1rem;margin:1.5rem 0;font-size:.95rem;}
+ .sources{margin-top:2.5rem;padding-top:1rem;border-top:1px solid #ccc;}
+ .sources h2{margin-top:0;}
+ .sources ul{padding-left:1.2rem;}
+ .sources li{margin-bottom:.5rem;font-size:.92rem;}
+ .sources a{color:var(--sage);}
+ .source-note{font-size:.85rem;color:var(--sage);margin-top:.8rem;}
+</style>
+</head>
+<body>
+<div class="wrap">
+ <h1>New Outlook Won't Add Your Web Calendar? Here's the Fix</h1>
+ <p class="byline">The Kernel Patch — plain-language tech notes</p>
+
+ <p>You try to subscribe to a web calendar — a club calendar, a school calendar, a speaker series — and New Outlook throws a vague "Sorry, we can't do that right now" and gives up. It's not you, and it's not the calendar's fault.</p>
+
+ <h2>What's actually going on</h2>
+ <p>New Outlook (and modern versions of desktop Outlook) use a newer authentication system, and they announce that capability to whatever server is hosting the calendar — even when the calendar doesn't require a login at all. Some calendar servers don't know what to do with that announcement and simply refuse the connection instead of just handing over the calendar. It's a compatibility hiccup, not something wrong with your account.</p>
+
+ <h2>The fix that usually works</h2>
+ <p>Add the subscription through <strong>Outlook on the web</strong> instead of the desktop app — the browser version doesn't run into the same handshake problem, and once it's added there, it shows up automatically in New Outlook too.</p>
+ <ol>
+ <li>Go to <strong>outlook.office.com</strong> (or outlook.com) and sign in.</li>
+ <li>Open <strong>Calendar</strong> in the left-hand menu.</li>
+ <li>Select <strong>Add calendar</strong> → <strong>From internet</strong>.</li>
+ <li>Paste in the calendar's link (it should end in <code>.ics</code>; if you only have a "webcal://" link, that usually works too).</li>
+ <li>Give it a name and color, then select <strong>Save</strong>.</li>
+ </ol>
+ <p>Give it a few minutes, then check New Outlook or your desktop app — the calendar should now appear alongside your others.</p>
+
+ <div class="note">Where to find the calendar's link: look for a "Subscribe," "iCal," or "Add to calendar" button on the organization's website — it's usually a small link icon near their event listings.</div>
+
+ <a class="cta" href="https://www.thekernelpatch.com/contact">Still stuck? I'll track it down for you →</a>
+
+ <div class="sources">
+ <h2>Sources</h2>
+ <ul>
+ <li><a href="https://learn.microsoft.com/en-us/troubleshoot/outlook/calendaring/cannot-add-an-internet-calendar">Can't add an Internet calendar - Outlook</a> — Microsoft Learn</li>
+ </ul>
+ <p class="source-note">Corrected 2026-09-18: the menu path is "Add calendar → From internet," not "Subscribe from web" as the original draft said.</p>
+ </div>
+
+ <footer>The Kernel Patch — Tech for people who want to do anything but.</footer>
+</div>
+</body>
+</html>
